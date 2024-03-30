@@ -19,12 +19,16 @@ public class TestUtil {
     assertFalse(util.compute(5));
   }
 
+  @Test
   public void testCompute_EvenNumberOfArguments() {
     assertFalse(util.compute(1, 2));
   }
- 
+  
+  @Test(expected = RuntimeException.class)
+  public void testCompute_ZeroAsArgument_ThrowsRuntimeException() {
+    assertFalse(util.compute(1, 0, -1)); // Adding more arguments to ensure it's not a single or even number scenario
+  }
 
-
-
+  
   
 }
