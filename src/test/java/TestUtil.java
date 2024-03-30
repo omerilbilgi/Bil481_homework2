@@ -31,11 +31,11 @@ public class TestUtil {
 
   @Test
   public void testCompute_OddNumberOfArguments_SumNotDivisibleByAny() {
-    assertTrue(util.compute(2, 4, 1)); // Sum is 7, which is not divisible by 2, 4, or 1
+    assertTrue(util.compute(2, 4, 1)); 
   }
 
   @Test
   public void testCompute_OddNumberOfArguments_SumDivisibleByOneArgument() {
-    assertFalse(util.compute(6, 3, -2)); // Sum is 7, which is divisible by 7 itself
+    assertFalse(util.compute(6, 3, -2)); 
   }
 }
