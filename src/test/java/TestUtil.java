@@ -29,6 +29,13 @@ public class TestUtil {
     assertFalse(util.compute(1, 0, -1)); // Adding more arguments to ensure it's not a single or even number scenario
   }
 
-  
-  
+  @Test
+  public void testCompute_OddNumberOfArguments_SumNotDivisibleByAny() {
+    assertTrue(util.compute(2, 4, 1)); // Sum is 7, which is not divisible by 2, 4, or 1
+  }
+
+  @Test
+  public void testCompute_OddNumberOfArguments_SumDivisibleByOneArgument() {
+    assertFalse(util.compute(6, 3, -2)); // Sum is 7, which is divisible by 7 itself
+  }
 }
